@@ -1,0 +1,218 @@
+/*Formato hoja completa*/
+.Hoja {
+    max-width: 70vw;
+    height: auto;
+    margin: auto 15vw auto 15vw;
+  }
+
+/*Formato Encabezado (Foto-Info)*/
+.Encabezado {
+    background-color: rgb(136, 185, 185);
+    display: flex; 
+}
+    .Foto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    } 
+    .Info{
+    padding: 1% 2% 0% 2%;
+    } 
+        .resumen {
+            background-color: rgb(224, 235, 231);
+        } 
+        /*Formato Texto Encabezado (Info)*/
+        /*(titulo)*/
+        .Info h1{
+            color:teal;
+            margin: 1% 0% 0% 0%;
+            font-size: 3.4vmax;
+        }
+        /*(subtitulo)*/
+        .Info h2{
+            color:rgb(55, 92, 92);
+            margin: 2% 0% 0% 0%;
+            font-size: 2.7vmax;
+        }
+        /*(resumen)*/
+        .Info p {
+            color: rgb(55, 92, 92);
+            font-size: 1.2vmax;
+            padding: 2.6%;
+            text-align: justify;
+        }
+
+/*Formato Columna (secundaria-primaria)*/    
+.columna{
+    display: grid;
+    grid-template-columns: 31% 69%;
+    margin: 0% 0% 10% 0%;
+} 
+    /*Texto (secundaria)*/ 
+    .secundaria h3{
+        color: rgb(95, 139, 139);
+        background-color: rgb(183, 211, 211);
+        border-top-right-radius: 0.6em;
+        padding: 0% 8%;
+        font-size: 1.7vmax; 
+    }
+    .secundaria b, p, a{
+        color:rgb(55, 92, 92);
+    }
+    .secundaria tr th{
+        color: rgb(6, 48, 48);
+        font-size: 1.27vmax; 
+        text-align: left;
+    }
+    .secundaria tr td{    
+        color: rgb(55, 92, 92);
+        padding: 0em 0.7em;
+        font-size: 1.2vmax; 
+    }
+    /*Formato (secundaria)*/ 
+    .secundaria{
+        background-color: rgb(156, 185, 185);
+        margin-top: 1em;
+        padding: 0em 0.8em 1em;
+    }
+    .secundaria hr{
+        border: 0.2vh solid rgb(224, 235, 231);
+        margin: 1em 0em;
+    }
+        /*Formato (contacto)*/ 
+        .contacto img {
+            background-color: rgb(183, 211, 211);
+            border-radius: 30%;
+            padding: 2% 2%;
+            margin: 0% 3% 0% 0%;
+        }
+        .contacto p,a{
+            margin: 0%;
+            font-size: 1.26vmax;        
+        }       
+            .correo, .telefono, .ubicacion, .linkedin, .github{
+                display: flex;
+                align-items: center;
+                margin-top: 1em;
+            }
+        /*Formato (Habilidades)*/ 
+        .habilidades table{
+            margin: 0em 0.3em;
+        }
+        /*Formato (Idiomas)*/ 
+        .español, .ingles{
+            display: flex;
+            align-items: center;
+            margin-left: 0.7em;
+            justify-content: space-between;
+            font-size: 1.4vmax;
+        }
+        .progressbar {
+            margin: 0.6em;
+            height: 0.7em;
+            min-width: 10vmax;
+            max-width: 30vmax;
+            background: #ccc;
+            border-radius: 8em;
+            overflow: hidden;
+        }
+        .valor-progressbar {
+            background: teal;
+            height: 0.7em;
+        }
+        
+        /*Formato (Intereses)*/ 
+        .intereses tr td{
+            padding-left: 1.5em;
+            text-align: justify;
+        }
+
+    /*(primaria)*/    
+    .primaria{
+        height: 100%;
+        background-color: rgb(224, 235, 231);
+        margin: 1em 0em 1em 1em;
+        padding: 0em 1.7em;
+    }
+    .primaria hr{
+        border: 0.2vh solid rgb(156, 185, 185);;
+        margin: 1em 0em;
+    }
+        
+    /*Texto (primaria)*/ 
+    .primaria h3{
+        color: rgb(6, 48, 48);
+        background-color: rgb(183, 211, 211);
+        border-top-right-radius: 0.6em;
+        padding: 0% 4%;
+    }
+     .primaria b, dl dt b, dl dd{
+        color: rgb(55, 92, 92);
+    }
+    .primaria p{
+        color:rgb(100, 133, 133);
+    }
+        /*Formato Texto Formulario */
+        .Formulario h3{
+            color: rgb(6, 48, 48);
+        }
+        .Formulario b{
+            color: rgb(55, 92, 92);
+        }
+        /*Formato Formulario */
+        .inputEmail{
+            margin: 0% 2%;
+        }
+        .textarea{
+            height: 5em;
+            max-width: 35vmax;
+            margin: 2% 0%;
+        }
+        .button{
+            background-color:  rgb(156, 185, 185);
+            border-radius: 9rem;
+            color: rgb(224, 235, 231);
+            font-size: 1.3em;
+            padding: 1.4% 2.4%;
+            cursor: pointer;
+            border: none;
+        }
+        .button:hover {
+            background-color: rgb(136, 185, 185);
+        }
+
+@media (max-width: 700px) {
+  .Encabezado{
+    flex-direction: column;
+  }
+  /*Formato Texto Encabezado*/
+  .Encabezado h1{
+    font-size: 2rem;
+  }
+  .Encabezado h2{
+    font-size: 1.6rem;
+  }
+  .Encabezado p{
+    font-size: 0.8rem;
+  }
+
+  /*Formato Texto Columna*/
+  .columna{
+    display: flex;
+    flex-direction: column;
+  }
+  .primaria, .secundaria{
+    margin: 1em 0em;
+  }
+  /*Formato Texto Columna Secundaria*/ 
+  .secundaria h3{
+    font-size: 1.5em;
+  }
+  .secundaria p,a, .secundaria tr td, .secundaria tr th{
+    font-size: 1em;
+  }
+  .secundaria b{
+    font-size: 2em;
+  }
+}
